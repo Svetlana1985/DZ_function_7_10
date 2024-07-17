@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ-fuction_7_10</title>
+    <script>
+  
+    // function formatTime(hours, minutes = 0, seconds = 0) {
+    
+    // const formattedHours = String(hours).padStart(2, '0');
+    // const formattedMinutes = String(minutes).padStart(2, '0');
+    // const formattedSeconds = String(seconds).padStart(2, '0');
+    
+    // console.log(`${formattedHours}:${formattedMinutes}:${formattedSeconds}`)}
+   
+   
+//     function timeToSeconds(hours, minutes, seconds) {
+//     return hours * 3600 + minutes * 60 + seconds;
+//     }
+// let hours = parseInt(prompt("Введите значение времени в часах"));
+// let minutes = parseInt(prompt("Введите значение времени в минутах"));
+// let seconds = parseInt(prompt("Введите значение времени в секундах"));
+
+// let totalTimeInSeconds = timeToSeconds(hours, minutes, seconds);
+// alert(totalTimeInSeconds);
+
+//     let seconds = parseInt(prompt("Введите количество секунд"));
+//     function formatSeconds(seconds) {
+    
+//     const hours = Math.floor(seconds / 3600);
+//     const minutes = Math.floor((seconds % 3600) / 60);
+//     const remainingSeconds = seconds % 60;
+
+    
+//     const formattedHours = String(hours).padStart(2, '0');
+//     const formattedMinutes = String(minutes).padStart(2, '0');
+//     const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    
+//     return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+// }
+//     alert(formatSeconds(seconds));
+
+
+let time1 = prompt("Введите время в формате 'чч,мм,сс'");
+let time2 = prompt("Введите время в формате 'чч,мм,сс'");
+
+function parseTimeToSeconds(time) {
+    let parts = time.split(',').map(Number);
+    let hours = parts[0];
+    let minutes = parts[1];
+    let seconds = parts[2];
+    return hours * 3600 + minutes * 60 + seconds;
+}
+
+let seconds1 = parseTimeToSeconds(time1);
+let seconds2 = parseTimeToSeconds(time2);
+
+// console.log(`Время 1 в секундах: ${seconds1}`);
+// console.log(`Время 2 в секундах: ${seconds2}`);
+        
+        let result = `${seconds2 - seconds1}`    
+        function formatSeconds(result) {
+    
+        const hours = Math.floor(result / 3600);
+        const minutes = Math.floor((result % 3600) / 60);
+        const remainingSeconds = result % 60;
+    
+        
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+    
+        
+        return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+    }
+        alert(formatSeconds(result));
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
